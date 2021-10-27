@@ -40,8 +40,12 @@ public class Sudoku
      * @param  y  a sample parameter for a method
      * @return    the sum of x and y
      */
-    public int sampleMethod(int y)
+    public boolean isValid()
     {
-        
+        for(int i = 0 ; i < 3 ; i++){
+            for(int j = 0 ; j < 3; j++) {
+                sud_mat.whosThereRow(j, );
+            }
+        }
     }
 }

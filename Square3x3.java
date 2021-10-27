@@ -46,7 +46,7 @@ public class Square3x3
     /** getCell
      * An example of a method - replace this comment with your own
      *
-     * @param  y  a sample parameter for a method
+     * @param
      * @return    the sum of x and y
      */
     public int getCell(int row, int col)
@@ -57,7 +57,7 @@ public class Square3x3
     /** setXY
      * An example of a method - replace this comment with your own
      *
-     * @param  y  a sample parameter for a method
+     * @param
      * @return    the sum of x and y
      */
     public void setXY(int row, int col, int value)
@@ -68,7 +68,7 @@ public class Square3x3
     /** toString
      * An example of a method - replace this comment with your own
      *
-     * @param  y  a sample parameter for a method
+     * @param
      * @return    the sum of x and y
      */
     public String toString()
@@ -87,7 +87,7 @@ public class Square3x3
     /** allThere
      * An example of a method - replace this comment with your own
      *
-     * @param  y  a sample parameter for a method
+     * @param
      * @return    the sum of x and y
      */
     public boolean allThere()
@@ -105,7 +105,7 @@ public class Square3x3
     /** whosThereRow
      * An example of a method - replace this comment with your own
      *
-     * @param  y  a sample parameter for a method
+     * @param
      * @return    the sum of x and y
      */
     public void whosThereRow(int row, boolean[] values)
@@ -119,7 +119,7 @@ public class Square3x3
     /** whosThereCol
      * An example of a method - replace this comment with your own
      *
-     * @param  y  a sample parameter for a method
+     * @param
      * @return    the sum of x and y
      */
     public void whosThereCol(int col, boolean[] values)
