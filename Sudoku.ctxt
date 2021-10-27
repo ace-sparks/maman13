@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=Sudoku
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Sudoku\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=
+comment2.target=Sudoku()
+comment2.text=\r\n\ Constructor\ for\ objects\ of\ class\ Sudoku\r\n
+comment3.params=square3x3Array
+comment3.target=Sudoku(Square3x3[][])
+comment3.text=\r\n\ Constructor\ for\ objects\ of\ class\ Sudoku\r\n
+comment4.params=line
+comment4.target=boolean\ lineArr(int)
+comment4.text=\ lineValid\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\r\n\ @param\ \ y\ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ the\ sum\ of\ x\ and\ y\r\n
+comment5.params=
+comment5.target=boolean\ isValid()
+comment5.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\r\n\ @param\ \ y\ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ the\ sum\ of\ x\ and\ y\r\n
+numComments=6
