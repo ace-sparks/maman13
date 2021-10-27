@@ -115,6 +115,7 @@ public class Square3x3
                 values[matrix[row][i]] = true;
         }
     }
+
     /** whosThereCol
      * An example of a method - replace this comment with your own
      *
@@ -128,5 +129,4 @@ public class Square3x3
                 values[matrix[i][col]] = true;
         }
     }
-
 }
