@@ -8,25 +8,45 @@
 public class Square3x3
 {
     // instance variables
-    private int [][] matrix = new int[3][3]; 
+    private int [][] mat = new int[3][3];
+    public static void main(String[]args){
+        Square3x3 s1 = new Square3x3();
+        System.out.println(s1);
+        ///////////////////////////
+        int [][] arr2 = new int [][] {{1,2,3},{4,5,6},{7,8,9}};
+        int [][] arr3 = new int [][] {{1,2},{4,5}};
+        int [][] arr4 = new int [][] {{1,2,3,4},{4,5,6,7},{7,8,9,10}};
+        Square3x3 s2 = new Square3x3(arr2);
+        Square3x3 s3 = new Square3x3(arr3);
+        Square3x3 s4 = new Square3x3(arr4);
+        System.out.println(s2);
+        System.out.println(s3);
+        System.out.println(s4);
+        ///////////////////////////
+        int [][] arr5 = new int [][]{{5,4,6},{2,1,3},{7,8,9}};
+        Square3x3 s5 = new Square3x3(arr5);
+        System.out.println(s5.allThere());
+        ///////////////////////////
+        int [][] arr6 = new int [][] {{1,2,3},{4,5,6},{7,8,9}};
+    }
     /** Constructor 1
      * Constructor for objects of class Square3x3
      */
     public Square3x3()
     {
-        matrix = new int[][]{{-1,-1,-1},{-1,-1,-1},{-1,-1,-1}};
+        mat = new int[][]{{-1,-1,-1},{-1,-1,-1},{-1,-1,-1}};
     }
 
     /** Constructor 2
      * Constructor for objects of class Square3x3
      */
     public Square3x3(int [][] array){
-        for(int i = 0; i < 3 ; i++){
-            for(int j = 0; j < 3 ; j++){
+        for(int i = 0; i < mat.length ; i++){
+            for(int j = 0; j < mat[0].length ; j++){
                 if(j < array[0].length && i < array.length )
-                    matrix[i][j] = array[i][j];
+                    mat[i][j] = array[i][j];
                 else
-                    matrix[i][j] = -1;
+                    mat[i][j] = -1;
             }
         }
     }
@@ -36,9 +56,9 @@ public class Square3x3
      */
     public Square3x3(Square3x3 other)
     {
-        for(int i = 0; i < 3 ; i++){
-            for(int j = 0; j < 3 ; j++){
-                matrix[i][j] = other.matrix[i][j];
+        for(int i = 0; i < mat.length ; i++){
+            for(int j = 0; j < mat[0].length ; j++){
+                mat[i][j] = other.mat[i][j];
             }
         }
     }
@@ -51,7 +71,9 @@ public class Square3x3
      */
     public int getCell(int row, int col)
     {
-        return matrix[row][col];
+        if(row > -1 && col > -1 && row < 3 && col < 3)
+            return mat[row][col];
+        return -1;
     }
 
     /** setXY
@@ -62,7 +84,8 @@ public class Square3x3
      */
     public void setXY(int row, int col, int value)
     {
-        matrix[row][col] = value;
+        if(row > -1 && col > -1 && row < 3 && col < 3)
+            mat[row][col] = value;
     }
 
     /** toString
@@ -76,7 +99,7 @@ public class Square3x3
         String printString = "";
         for(int i = 0; i < 3; i++){
             for(int j = 0; j < 3; j++){
-                printString = printString + matrix[i][j] + "\t";
+                printString = printString + mat[i][j] + "\t";
                 if(j == 2)
                     printString = printString + "\n";
             }
@@ -92,14 +115,17 @@ public class Square3x3
      */
     public boolean allThere()
     {
-        for(int i =0 ; i < matrix.length; i++){
-            for(int j =0 ; j < matrix[0].length; j++){
-                if(matrix[i][j] < 1 || matrix[i][j] > 9){
-                    return false;
-                }
+        boolean [] all_true = new boolean [10];
+        boolean allTrue = true;
+        for(int i =0 ; i < mat.length; i++){
+            for(int j =0 ; j < mat[0].length; j++){
+                all_true [mat[i][j]] = true; 
             } 
         }
-        return true;
+        for(int i = 1; i < 10 ; i++){
+            allTrue = allTrue && all_true[i];
+        }
+        return allTrue;
     }
 
     /** whosThereRow
@@ -110,9 +136,8 @@ public class Square3x3
      */
     public void whosThereRow(int row, boolean[] values)
     {
-        for(int i = 0 ; i < matrix.length; i++){
-            if(matrix[row][i] > 0 && matrix[row][i] < 10)
-                values[matrix[row][i]] = true;
+        for(int i = 0 ; i < mat.length; i++){
+            values[mat[row][i]] = true;
         }
     }
 
@@ -124,9 +149,8 @@ public class Square3x3
      */
     public void whosThereCol(int col, boolean[] values)
     {
-        for(int i = 0 ; i < matrix.length; i++){
-            if(matrix[i][col] > 0 && matrix[i][col] < 10)
-                values[matrix[i][col]] = true;
+        for(int i = 0 ; i < mat.length; i++){
+            values[mat[i][col]] = true;
         }
     }
 }
