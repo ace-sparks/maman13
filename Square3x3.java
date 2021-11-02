@@ -1,34 +1,15 @@
 
 /**
- * Write a description of class Square3x3 here.
- *
- * @author (your name)
- * @version (a version number or a date)
+ * Maman 13 , first question & second question.
+ * "Square3x3"
+ * Name: @David Nalivkin
+ * TZ:332403468
+ * That class describe square 3x3 of int variables.
  */
 public class Square3x3
 {
     // instance variables
     private int [][] mat = new int[3][3];
-    public static void main(String[]args){
-        Square3x3 s1 = new Square3x3();
-        System.out.println(s1);
-        ///////////////////////////
-        int [][] arr2 = new int [][] {{1,2,3},{4,5,6},{7,8,9}};
-        int [][] arr3 = new int [][] {{1,2},{4,5}};
-        int [][] arr4 = new int [][] {{1,2,3,4},{4,5,6,7},{7,8,9,10}};
-        Square3x3 s2 = new Square3x3(arr2);
-        Square3x3 s3 = new Square3x3(arr3);
-        Square3x3 s4 = new Square3x3(arr4);
-        System.out.println(s2);
-        System.out.println(s3);
-        System.out.println(s4);
-        ///////////////////////////
-        int [][] arr5 = new int [][]{{5,4,6},{2,1,3},{7,8,9}};
-        Square3x3 s5 = new Square3x3(arr5);
-        System.out.println(s5.allThere());
-        ///////////////////////////
-        int [][] arr6 = new int [][] {{1,2,3},{4,5,6},{7,8,9}};
-    }
     /** Constructor 1
      * Constructor for objects of class Square3x3
      */
@@ -39,6 +20,7 @@ public class Square3x3
 
     /** Constructor 2
      * Constructor for objects of class Square3x3
+     * @param array - build square3x3 from array variables
      */
     public Square3x3(int [][] array){
         for(int i = 0; i < mat.length ; i++){
@@ -52,7 +34,8 @@ public class Square3x3
     }
 
     /** Copy constructor
-     * Constructor for objects of class Square3x3
+     * Constructor for objects of class Square3x3 that copy other object of this class.
+     * @param other - other square 3x3
      */
     public Square3x3(Square3x3 other)
     {
@@ -64,10 +47,11 @@ public class Square3x3
     }
 
     /** getCell
-     * An example of a method - replace this comment with your own
+     * This method return one of cells that recieve at row and col.
      *
-     * @param
-     * @return    the sum of x and y
+     * @param row - row of matrix
+     * @param col - column of matrix
+     * @return value of cell of matrix or -1 if its not exist
      */
     public int getCell(int row, int col)
     {
@@ -77,10 +61,10 @@ public class Square3x3
     }
 
     /** setXY
-     * An example of a method - replace this comment with your own
+     * This method set value of cell that recieve at row and col.
      *
-     * @param
-     * @return    the sum of x and y
+     * @param row - number of row of matrix
+     * @param col - number of column of matrix
      */
     public void setXY(int row, int col, int value)
     {
@@ -89,10 +73,12 @@ public class Square3x3
     }
 
     /** toString
-     * An example of a method - replace this comment with your own
+     * Method that override that print object of class in format.
+     * x x x
+     * x x x
+     * x x x
      *
-     * @param
-     * @return    the sum of x and y
+     * @return string of print of square3x3 object
      */
     public String toString()
     {
@@ -108,10 +94,9 @@ public class Square3x3
     }
 
     /** allThere
-     * An example of a method - replace this comment with your own
+     * This method checks if all numbers of 1-9 are exist in.
      *
-     * @param
-     * @return    the sum of x and y
+     * @return  true value if that exist
      */
     public boolean allThere()
     {
@@ -129,10 +114,10 @@ public class Square3x3
     }
 
     /** whosThereRow
-     * An example of a method - replace this comment with your own
+     * This method checks who exist to row of square3x3 object.
      *
-     * @param
-     * @return    the sum of x and y
+     * @param row - number of row that method check
+     * @param values - array that save who exist in row
      */
     public void whosThereRow(int row, boolean[] values)
     {
@@ -142,10 +127,10 @@ public class Square3x3
     }
 
     /** whosThereCol
-     * An example of a method - replace this comment with your own
+     * This method checks who exist to column of object.
      *
-     * @param
-     * @return    the sum of x and y
+     * @param col - column that choose to check
+     * @param values - array that save who exist in column
      */
     public void whosThereCol(int col, boolean[] values)
     {
